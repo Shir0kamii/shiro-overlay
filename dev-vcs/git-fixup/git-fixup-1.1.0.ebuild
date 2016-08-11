@@ -21,6 +21,8 @@ src_prepare() {
 		-e "s/ \${INSTALLDIR}/ \${DESTDIR}\${INSTALLDIR}/"\
 		Makefile\
 	|| die "Can't use DESTDIR in Makefile, which is mandatory on gentoo"
+
+	eapply_user
 }
 
 src_compile() {
@@ -29,4 +31,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR=${D} install
+	use zsh-completion && emake DESTDIR=${D} install-zsh
 }
