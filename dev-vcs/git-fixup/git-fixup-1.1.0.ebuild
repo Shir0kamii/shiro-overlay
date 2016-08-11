@@ -6,7 +6,7 @@ EAPI=6
 
 DESCRIPTION="Fighting the copy-paste element of your rebase workflow"
 HOMEPAGE="https://github.com/keis/git-fixup"
-SRC_URI="https://github.com/keis/git-fixup/archive/v1.1.0.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/keis/git-fixup/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE=""
 SLOT="0"
