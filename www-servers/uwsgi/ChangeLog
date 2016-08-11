@@ -1,0 +1,173 @@
+# ChangeLog for www-servers/uwsgi
+# Copyright 1999-2016 Gentoo Foundation; Distributed under the GPL v2
+# (auto-generated from git log)
+
+*uwsgi-2.0.11.1 (09 Aug 2015)
+*uwsgi-2.0.9 (09 Aug 2015)
+
+  09 Aug 2015; Robin H. Johnson <robbat2@gentoo.org>
+  +files/1.1.2-threaded-php.patch, +files/1.2.3-pyerl.patch,
+  +files/42_mod_uwsgi-r1.conf, +files/42_mod_uwsgi-r2.conf,
+  +files/42_mod_uwsgi.conf, +files/gentoo.buildconf, +files/uwsgi.confd-r1,
+  +files/uwsgi.confd-r3, +files/uwsgi.initd-r1, +files/uwsgi.initd-r2,
+  +files/uwsgi.initd-r3, +files/uwsgi.initd-r4, +files/uwsgi.initd-r5,
+  +files/uwsgi.initd-r6, +metadata.xml, +uwsgi-2.0.9.ebuild,
+  +uwsgi-2.0.11.1.ebuild:
+  proj/gentoo: Initial commit
+
+  This commit represents a new era for Gentoo:
+  Storing the gentoo-x86 tree in Git, as converted from CVS.
+
+  This commit is the start of the NEW history.
+  Any historical data is intended to be grafted onto this point.
+
+  Creation process:
+  1. Take final CVS checkout snapshot
+  2. Remove ALL ChangeLog* files
+  3. Transform all Manifests to thin
+  4. Remove empty Manifests
+  5. Convert all stale $Header$/$Id$ CVS keywords to non-expanded Git $Id$
+  5.1. Do not touch files with -kb/-ko keyword flags.
+
+  Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
+  X-Thanks: Alec Warner <antarus@gentoo.org> - did the GSoC 2006 migration
+  tests
+  X-Thanks: Robin H. Johnson <robbat2@gentoo.org> - infra guy, herding this
+  project
+  X-Thanks: Nguyen Thai Ngoc Duy <pclouds@gentoo.org> - Former Gentoo
+  developer, wrote Git features for the migration
+  X-Thanks: Brian Harring <ferringb@gentoo.org> - wrote much python to improve
+  cvs2svn
+  X-Thanks: Rich Freeman <rich0@gentoo.org> - validation scripts
+  X-Thanks: Patrick Lauer <patrick@gentoo.org> - Gentoo dev, running new 2014
+  work in migration
+  X-Thanks: Michał Górny <mgorny@gentoo.org> - scripts, QA, nagging
+  X-Thanks: All of other Gentoo developers - many ideas and lots of paint on
+  the bikeshed
+
+  24 Aug 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Use https by default
+
+  Convert all URLs for sites supporting encrypted connections from http to
+  https
+
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+  24 Aug 2015; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Revert DOCTYPE SYSTEM https changes in metadata.xml
+
+  repoman does not yet accept the https version.
+  This partially reverts eaaface92ee81f30a6ac66fe7acbcc42c00dc450.
+
+  Bug: https://bugs.gentoo.org/552720
+
+*uwsgi-2.0.11.1-r1 (25 Aug 2015)
+
+  25 Aug 2015; Ultrabug <ultrabug@gentoo.org> metadata.xml,
+  +uwsgi-2.0.11.1-r1.ebuild:
+  add pypy support
+
+  Package-Manager: portage-2.2.20.1
+
+*uwsgi-2.0.11.2 (07 Oct 2015)
+
+  07 Oct 2015; Ultrabug <ultrabug@gentoo.org> +uwsgi-2.0.11.2.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.22
+
+  07 Oct 2015; Ultrabug <ultrabug@gentoo.org> uwsgi-2.0.11.2.ebuild:
+  ebuild qa thx to hasufell
+
+*uwsgi-2.0.11.2-r1 (12 Oct 2015)
+
+  12 Oct 2015; Anthony G. Basile <blueness@gentoo.org>
+  +uwsgi-2.0.11.2-r1.ebuild:
+  add libressl support
+
+  Package-Manager: portage-2.2.20.1
+
+  11 Nov 2015; Justin Lecher <jlec@gentoo.org> uwsgi-2.0.9.ebuild,
+  uwsgi-2.0.11.1.ebuild, uwsgi-2.0.11.1-r1.ebuild, uwsgi-2.0.11.2.ebuild,
+  uwsgi-2.0.11.2-r1.ebuild:
+  Depend on threading support in python
+
+  Package-Manager: portage-2.2.23
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+  06 Dec 2015; Michał Górny <mgorny@gentoo.org> uwsgi-2.0.11.2-r1.ebuild:
+  Re-enable py3.3, requested by angry_vincent
+
+  Package-Manager: portage-2.2.26
+
+*uwsgi-2.0.12 (31 Dec 2015)
+
+  31 Dec 2015; Ultrabug <ultrabug@gentoo.org> +uwsgi-2.0.12.ebuild:
+  version bump, add php7.0 support, fix #567706
+
+  Package-Manager: portage-2.2.25
+
+  31 Dec 2015; Ultrabug <ultrabug@gentoo.org> uwsgi-2.0.9.ebuild,
+  uwsgi-2.0.11.1.ebuild, uwsgi-2.0.11.1-r1.ebuild, uwsgi-2.0.11.2.ebuild,
+  uwsgi-2.0.11.2-r1.ebuild:
+  drop obsolete ruby19 support
+
+  Package-Manager: portage-2.2.25
+
+  31 Dec 2015; Ultrabug <ultrabug@gentoo.org> -uwsgi-2.0.11.1.ebuild,
+  -uwsgi-2.0.11.1-r1.ebuild, -uwsgi-2.0.11.2.ebuild:
+  drop old
+
+  Package-Manager: portage-2.2.25
+
+  03 Jan 2016; Jason Zaman <perfinion@gentoo.org> uwsgi-2.0.9.ebuild,
+  uwsgi-2.0.11.2-r1.ebuild, uwsgi-2.0.12.ebuild:
+  Add selinux policy rdep
+
+  Package-Manager: portage-2.2.26
+
+  24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Replace all herds with appropriate projects (GLEP 67)
+
+  Replace all uses of herd with appropriate project maintainers, or no
+  maintainers in case of herds requested to be disbanded.
+
+  24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Set appropriate maintainer types in metadata.xml (GLEP 67)
+
+*uwsgi-2.0.13 (10 May 2016)
+
+  10 May 2016; Ultrabug <ultrabug@gentoo.org> +uwsgi-2.0.13.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.27
+
+  10 May 2016; Ultrabug <ultrabug@gentoo.org> uwsgi-2.0.9.ebuild,
+  uwsgi-2.0.11.2-r1.ebuild, uwsgi-2.0.12.ebuild:
+  QA drop php5-4 support as it has been removed from tree
+
+  Package-Manager: portage-2.2.27
+
+*uwsgi-2.0.13.1 (13 May 2016)
+
+  13 May 2016; Ultrabug <ultrabug@gentoo.org> +files/uwsgi.confd-r4,
+  +files/uwsgi.initd-r7, metadata.xml, -uwsgi-2.0.13.ebuild,
+  +uwsgi-2.0.13.1.ebuild:
+  version bump, add go support, make pid path mode configurable, drop broken
+  release
+
+  Package-Manager: portage-2.2.27
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/uwsgi.initd-r1,
+  files/uwsgi.initd-r2, files/uwsgi.initd-r3, files/uwsgi.initd-r4,
+  files/uwsgi.initd-r5, files/uwsgi.initd-r6, files/uwsgi.initd-r7:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*uwsgi-2.0.13.1-r1 (20 May 2016)
+
+  20 May 2016; Ultrabug <ultrabug@gentoo.org> files/uwsgi.initd-r7,
+  -uwsgi-2.0.13.1.ebuild, +uwsgi-2.0.13.1-r1.ebuild:
+  revbump, fix default values on init script
+
+  Package-Manager: portage-2.2.27
+
